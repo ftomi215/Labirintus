@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Labirintus</title>
+</head>
+<body>
+    <h1>Labirintus</h1>
+    <form>
+        <label for="player-number">Játékosok száma (1-4):</label>
+        <input type="number" id="player-number" name="player-number" min="1" max="4" value="2"><br>
+        <label for="treasure-number">Kincskártyák száma játékosonként:</label>
+        <input type="number" id="treasure-number" name="treasure-number" min="1" max="12" value="2">
+      </form>
+
+      <br>
+
+      <button id="start">Start</button><br><br>
+      <button id="description">Leírás</button><br><br>
+
+      <p id="help" style="visibility: hidden">
+      Egy kis segítség:
+      Kimaradt mező forgathatő rákattintással.
+      Elem beszúrható a sor vagy oszlop első vagy utolsó elemére kattintva, amennyiben az adott sor vagy oszlop nem fix.
+      Játékos léptetése a játékosra, majd egy mezőre kattintva lehetséges.
+      A számok a kincseket jelölik.
+      </p>
+
+      <p id="round" style="visibility: hidden"></p>
+
+      <p id="megjegyzes"></p>
+
+
+  
+      <div id="actual"></div>
+      
+        <table id="table">
+        </table>
+    
+
+      <p id="description-paragraph" style="visibility: hidden">A katakomba szobáit egy 7x7-es négyzetrács cellái jelképezik. Minden szoba esetén adott, hogy mely falain van ajtó. Ha két szomszédos szoba érintkező falán egy-egy ajtó van, akkor át lehet menni egyik szobából a másikba. A négyzetrács páros sorait és oszlopait el lehet tolni, a többi szoba végig rögzített a játék során. Az eltolásokkal az ajtókon keresztül utak nyílnak a szobák között, így lehet eljutni a kincsekhez. Mindegyik kérő arra törekszik, hogy a katakomba szobáinak ötletes eltolásával eljusson a kincsekhez. Aki elsőként találja meg mindahányat és kiindulópontjára sikeresen visszaérkezik az a nyertes.</p>
+
+      
+
+    <script src="index.js"></script>
+</body>
+</html>
